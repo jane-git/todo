@@ -5,10 +5,10 @@ import { theme } from './colors';
 
 export default function App() {
   const [working, setWorking] = useState(true);
-  const [text, setText] =useState("");
+ // const [text, setText] =useState("");
   const travel = () => setWorking(false);
   const work = () => setWorking(true);
-  const onChanegeText = (payload) => setText(event);
+//  const onChanegeText = (payload) => setText(event);
   return (
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app!</Text>
@@ -25,8 +25,8 @@ export default function App() {
         <TextInput 
         //keyboardType="email-address" 
        // autoCapitalize={"words"}
-         onChangeText={onChangeText}
-         value={text}
+     //    onChangeText={onChangeText}
+    //     value={text}
       //  returnKeyType="send"
         //multiline
        // secureTextEntry
