@@ -5,8 +5,10 @@ import { theme } from './colors';
 
 export default function App() {
   const [working, setWorking] = useState(true);
+  const [text, setText] =useState("");
   const travel = () => setWorking(false);
   const work = () => setWorking(true);
+  const onChanegeText = (payload) => setText(event);
   return (
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app!</Text>
@@ -19,10 +21,19 @@ export default function App() {
           <Text style={{...styles.btnText, color: !working ? "white": theme.grey}}>Travel</Text>
         </TouchableOpacity>
       </View>
-      <View>
-        <TextInput placeholder={working ? "Add a To Do": "Where do you want to go?"}
+     
+        <TextInput 
+        //keyboardType="email-address" 
+       // autoCapitalize={"words"}
+         onChangeText={onChangeText}
+         value={text}
+      //  returnKeyType="send"
+        //multiline
+       // secureTextEntry
+        keyboardType="email-address" 
+        placeholder={working ? "Add a To Do": "Where do you want to go?"}
         style={styles.input}/>
-      </View>
+      
     </View>
 
   );
